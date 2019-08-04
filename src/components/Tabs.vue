@@ -124,6 +124,7 @@
             </div>
         </div>
     </section>
+    
   </div>
 </template>
 
@@ -292,4 +293,32 @@ img{
 .text-dark{
     color: #999;
 }
+
+.table{
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table thead th{
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+
+.table tbody tr td:first-child{
+    text-align: left;
+}
+
+.table tbody tr:nth-child(odd){
+    background: #222;
+}
+
+.table tbody tr td{
+    color: #999;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+
+
 </style>
