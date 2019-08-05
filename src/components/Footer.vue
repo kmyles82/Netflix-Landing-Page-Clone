@@ -97,4 +97,13 @@ p{
 .footer li{
     line-height: 1.9;
 }
+
+@media(max-width: 960px){
+    .footer .footer-cols{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}    
+    
+
 </style>

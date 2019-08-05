@@ -174,5 +174,40 @@ img{
     text-transform: uppercase;
 }
 
+@media(max-width: 960px){
+    .showcase{
+        height: 70vh;
+    }
+
+    .showcase-top img{
+      top: 30%;
+      left: 5%;
+      transform: translate(0);
+    }
+
+    .showcase-content h1{
+      font-size: 3.7rem;
+      line-height: 1;
+    }
+
+    .showcase-content p{
+      font-size: 1.5rem;
+    }
+
+    .btn-xl{
+      font-size: 1.5rem;
+      padding: 1.4rem 1.2rem;
+    }
+
+    
+
+}
+
+@media(max-width: 700px){
+  .showcase:after{
+    box-shadow: inset 80px 80px 250px #000000, inset -80px -80px 250px #000000;
+  }
+}
+
 
 </style>

@@ -1,12 +1,23 @@
 <template>
   <div >
-    <h1>Hello</h1>
+    <Header/>
+    <Tabs/>
+    <Footer/>
   </div>
 </template>
 
 <script>
+import Header from './Header'
+import Tabs from './Tabs'
+import Footer from './Footer'
+
 export default {
   name: 'Home',
+  components:{
+    Header,
+    Tabs,
+    Footer
+  },
   data(){
     return{
 
