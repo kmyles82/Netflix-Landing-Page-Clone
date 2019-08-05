@@ -2,11 +2,14 @@
   <div>
     <section class="tabs">
       <div class="container">
-          <tabs @clicked="tabClicked" @changed="tabChanged"  >
-                <tab name="Cancel anytime">
+          <tabs @clicked="tabClicked" @changed="tabChanged"   >
+                  
+                  <tab prefix="<font-awesome-icon icon='coffee'/>" name="Cancel anytime" >
+                    
                     <Cancel/>
             </tab>
-                <tab name="Watch anywhere">
+                
+                <tab name="Watch anywhere" >
                     <Watch/>
             </tab>
                 <tab name="Pick your price">
@@ -35,22 +38,34 @@ export default {
   },
   data() {
     return {
-      
+      isActive: 0,
+      active: false
     }
     
   },
   methods: {
         tabClicked (selectedTab) {
             console.log('Current tab re-clicked:' + selectedTab.tab.name);
+            this.isActive = index;
+            this.active = !this.active
         },
         tabChanged (selectedTab) {
             console.log('Tab changed to:' + selectedTab.tab.name);
         },
+        selectItem(e, index) {
+    //   console.log(e);
+    //   e.target.className.push('tab-border')
+      this.isActive = index;
+      this.active = !this.active
+      //add border to current tab
+    //   e.target.classList.push("tab-border");
+    }
     }
 };
 </script>
 
 <style >
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -121,7 +136,13 @@ img {
 }
 
 .tabs-component-tab{
+    margin-bottom: 2rem;
+    height: 40px;
+}
 
+.tabs-component-tab.is-active {
+  color: #000;
+  border-bottom: 4px solid #e50914 !important;
 }
 
 .tabs-component-tab-a{
